@@ -1,0 +1,176 @@
+#o check if a number is positive, negative or zero
+number=int(input("enter the number:"))
+
+if number<0:
+    print("given number is negative.")
+elif 0<number:
+    print("given number is positive.")
+else:
+    print("given number is zero.")
+
+#Factorial number of given number
+
+num=int(input("enter the number:"))
+factorial=1
+i=1
+
+while i<=num:
+    factorial=factorial*i
+    i+=1
+print("enter the factorial:",factorial)
+
+#Write a Python program to get the Fibonacci series of given range.
+
+a=0
+b=1
+i=1
+while i<10:
+    c=a+b
+    print(c)
+    a=b
+    b=c
+    i+=1    
+
+HOW MEMORY IS MANAGED IN PYTHON?
+
+ANS:Python memory is managed by Python private heap space.
+-All Python objects and data structures are located in a private heap.
+-The programmer does not have access to this private heap and interpreter takes care of this Python private heap.
+-The allocation of Python heap space for Python objects is done by the Python memory manager.
+
+WHAT IS THE PURPOSE CONTINUE STATEMENT IN PYTHON?
+
+ANS:The continue statement in Python returns the control to the beginning of the while loop.
+    The continue statement rejects all the remaining statements in the current iteration of the loop and moves the 
+    control back to the top of the loop. The continue statement can be used in both while and for loops.
+
+#swap two number with temp variable and without temp variable
+
+#using a temp variable
+x=5
+y=8
+x,y=y,x
+print("swap the numbers x:",x)
+print("swap the numbers y:",y)
+
+#without using a temp variable
+a=int(input("enter the value:"))
+b=int(input("enter the value:"))
+a,b=b,a
+print("swap the numbers a:",a)
+print("swap the numbers b:",b)
+
+# given number is even or odd
+num=int(input("enter the number:"))
+if num%2==0:
+    print(" number is even.")
+else:
+    print(" number is odd.")
+
+#test whether a passed letter is a vowel or not
+letter=input("enter the letters:")
+if (letter=='a'or letter=='e' or letter=='i' or letter=='o' or letter=='u'):
+    print( "letter is vowel.")
+else:
+    print("letter is not vowel.")
+
+a=int(input("enter the number first:"))
+b=int(input("enter the number second:"))
+c=int(input("enter the number third:"))
+sum=a+b+c
+if a==b or b==c or c==a:
+    print("sum is zero.")
+else:
+    print("addition:",sum)    
+        
+
+x=int(input("enter the number first:"))
+y=int(input("enter the number second:"))
+if x==y or x+y==5:
+    print("it is return true.")
+else:
+    print("it is return false.")
+
+n=int(input("enter the number:"))
+sum=n*(n+1)/2
+print(sum)
+
+#to calculate the length of a string.
+
+str1="hello python"
+print(len(str1))
+
+
+# count the number of characters (character frequency) in a string
+str1='i have leptop in dell'
+str1.count('e')
+
+
+Que:-What are negative indexes and why are they used?
+=Python supports “indexing from the end”, that is, negative indexing.
+This means the last value of a sequence has an index of -1, the second last -2, and so on.
+You can use negative indexing as your advantage when you want to pick values from the end (right side) of an iterable.
+
+#count occurrences of a substring in a string
+str1='learning python in tops and learning java in tops '
+print(str1[9:15])
+
+#count the occurrences of each word in a given sentence
+str1='learning python in tops'
+str1.count('i')
+
+str1=input("enter the string1:")
+str2=input("enter the string2:")
+print(str1,str2,sep=" ")
+
+a=str2[:2]+str1[2:]
+b=str1[:2]+str2[2:]
+print(a)
+print(b)
+
+
+string=input("enter the string:")
+if len(string)<3:
+    print(string)
+elif string.endswith('ing'):
+    print(string + 'ly')
+else:
+    print(string + 'ing')
+
+str1=input("enter the string:")
+print(str1.find('not'))
+print(str1.find('poor'))
+str1.replace('not poor','good')
+
+
+#takes a list of words and returns the length of the longest one
+
+Words = [ 'one', 'two', 'three', 'twelve', 'fourteen'] 
+Maxlen =0 
+Longestword = " "
+for word in Words: 
+    if len(word) > Maxlen: 
+        Maxlen =len(word) 
+        Longestword = word 
+print(word, Maxlen) 
+
+#reverses a string if its length is a multiple of 4.
+
+str1=input("enter the string:")
+if len(str1)%4==0:
+    print(str1[::-1])
+else:
+     print(str1)
+
+str=input("enter the string:")
+if len(str)<2:
+        print("empty string ")
+else:
+    ns=str[:2]+str[-2:]
+    print(ns)
+
+#insert a string in the middle of a string.
+str = 'Hello what are doing.'
+x= str.find('doing')
+string = str[:x] + 'you '+str[x:]
+print(string)
